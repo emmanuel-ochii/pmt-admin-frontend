@@ -41,7 +41,10 @@ export class PmlWaybillDetailComponent implements OnInit {
 
     this.transaction_code = this.pmlwaybill.transaction_code || '';
     this.terminal_id = this.pmlwaybill.terminal_id.toString();
-    this.driver_id = this.pmlwaybill.driver_id.toString(); //object
+    this.driver_id = this.pmlwaybill.driver_id.toString() || '';
+    if (this.utilsService.hasProp(this.pmlwaybill, 'driver_id')) {
+      this.driver_id = this.pmlwaybill.driver_id.toString();
+    }//object
     this.vehicle_id = this.pmlwaybill.vehicle_id.toString();
     this.pmt_schedule_id = this.pmlwaybill.pmt_schedule_id.toString();
     this.pmt_route_id = this.pmlwaybill.pmt_route_id.toString();
@@ -49,6 +52,8 @@ export class PmlWaybillDetailComponent implements OnInit {
     this.total_charge = this.pmlwaybill.total_charge.toString();
     this.departure_date = this.pmlwaybill.departure_date;
     this.authorized_date = this.pmlwaybill.authorized_date.toDateString();
+
+    
     
 
     console.log('\nPmlwaybill Name', typeof this.pmlwaybill, this.pmlwaybill);

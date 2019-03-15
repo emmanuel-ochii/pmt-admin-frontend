@@ -17,3 +17,7 @@ export * from './vehicle';
 export * from './select-option-interface';
 export * from './pml-transaction';
 export * from './pml-billing';
+export * from './route';
+export * from './city';
+export * from './county';
+
