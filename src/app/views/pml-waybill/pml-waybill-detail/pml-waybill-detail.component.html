@@ -17,8 +17,8 @@
           </thead>
           <tbody>            
             <tr><th>Transaction Code </th><td>{{ transaction_code || '' }}</td></tr>
-            <tr><th>Terminal ID</th><td>{{ terminal_id.name || '' }}</td></tr>
-            <tr><th>Driver ID</th><td>{{ driver_id || '' }}</td></tr>
+            <tr><th>Terminal ID</th><td>{{ terminal_id || '' }}</td></tr>
+            <tr><th>Driver ID</th><td>{{ driver_id.surname || '' }}</td></tr>
             <tr><th>vehicle ID</th><td>{{ vehicle_id || '' }}</td></tr>
             <tr><th> Total Charge </th><td>{{ total_charge || '' }}</td></tr>
             <tr><th>Departure Date</th><td>{{ departure_date | date }}</td></tr>
