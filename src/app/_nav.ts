@@ -49,6 +49,8 @@ export const navItems = [
   { name: 'Assignment', url: '/assignment', icon: 'icon-calculator' },
   { name: 'PMT Waybill', url: '/pmt-waybill', icon: 'icon-calculator' },
   { name: 'PML Waybill', url: '/pml-waybill', icon: 'icon-calculator' },
+  { name: 'PML Transaction', url: '/pml-transaction', icon: 'icon-calculator' },
+  { name: 'PML Billing', url: '/pml-billing', icon: 'icon-calculator' },
   { name: 'Schedule', url: '/schedule', icon: 'icon-calculator', badge: {variant: 'info', text: 'NEW'} },
   { name: 'Maintenance', url: '/maintenance', icon: 'icon-calculator' },
   { name: 'Spares', url: '/spares', icon: 'icon-calculator' },

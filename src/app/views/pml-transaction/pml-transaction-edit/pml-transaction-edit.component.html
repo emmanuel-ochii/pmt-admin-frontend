@@ -1,0 +1,104 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Edit / Update Your </strong> PML Transaction
+      <div class="pull-right">
+          <button class="btn btn-sm btn-primary" style="width:100px" (click)="pmltransactionAdd()" title="Add a transaction"> Add Transaction</button>
+          &nbsp;
+          <button class="btn btn-sm btn-info" style="width:100px" (click)="goBack() " title="Go back"><i class="fa fa-reply"></i></button>
+      </div>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+          <div class="col-md-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                      <span class="input-group-text">Transaction Date </span>
+                    </div>
+                    <input id="transaction_date"  formControlName="transaction_date"  [(ngModel)]="formData.transaction_date" name="transaction_date" class="form-control  col-md-4" placeholder="Transaction Date" readonly/>
+                    
+                    <div class="input-group-append">
+                    </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                      <span class="input-group-text">Payable</span>
+                    </div>
+                    <input id="payable"  formControlName="payable"  [(ngModel)]="formData.payable" name="payable" class="form-control  col-md-4" placeholder="Pml Transaction payable "/>
+                    
+                    <div class="input-group-append">
+                    </div>
+            </div>
+          </div>
+        </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Transportation Expenses</span>
+                </div>                            
+                  <input id="transportation_expenses" formControlName="transportation_expenses" [(ngModel)]="formData.transportation_expenses"  name="transportation_expenses" class="form-control" placeholder="Transportation Expenses"/>                          
+                <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                        <span class="input-group-text">Taxi Expenses</span>
+                      </div>
+                      <input id="taxi_expenses"  formControlName="taxi_expenses"  [(ngModel)]="formData.taxi_expenses" name="taxi_expenses" class="form-control  col-md-4" placeholder="Pml Taxi Expenses "/>
+                      
+                      <div class="input-group-append">
+                      </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Payment Method</span>
+              </div>
+              <select id="payment_method" formControlName="payment_method" [(ngModel)]="formData.payment_method"  name="payment_method" class="form-control  col-md-4">
+                <option value="">Please select</option>
+                <option value="USSD">USSD</option>
+                <option value="POS">POS</option>
+                <option value="CASH">CASH</option>
+              </select>
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-credit-card-alt "></i></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Transaction Status</span>
+              </div>
+              <select id="transaction_status" formControlName="transaction_status" [(ngModel)]="formData.transaction_status"  name="transaction_status" class="form-control  col-md-4" required>
+                <option value="">Please select</option>
+                <option value="FAIL">FAIL</option>
+                <option value="PENDING">PENDING</option>
+                <option value="SUCCESSFUL">SUCCESSFUL</option>
+              </select>
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-icon-check  "></i></span>
+              </div>
+            </div>
+          </div>
+            <div class="form-group form-actions">
+                <button type="submit" class="btn btn-md btn-primary pull-right"><i class="fa fa-dot-circle-o"></i>Submit</button>
+                <button type="reset" class="btn btn-md btn-danger"><i class="fa fa-ban"></i> Reset</button>
+               </div>
+      </form>        
+    </div>
+
+  </div>
+</div>

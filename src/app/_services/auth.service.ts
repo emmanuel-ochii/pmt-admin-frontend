@@ -11,7 +11,7 @@ export class AuthService {
 
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
-    apiUrl = 'http://localhost:3000/api'; // environment.PEACE_API;
+    apiUrl = 'https://jibrila.herokuapp.com/api'; //environment.PEACE_API;
 
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -24,7 +24,7 @@ export class AuthService {
 
     login(loginPayload: LoginPayload) {
         console.log('\ninside Auth service', loginPayload);
-        return this.http.post<LoginResponse>(`${this.apiUrl}/drivers/login`, loginPayload)
+        return this.http.post<LoginResponse>(`${this.apiUrl}/customers/login`, loginPayload)
             .pipe(map(response => {
                 console.log(response);
                 if (response.success) {

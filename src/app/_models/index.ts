@@ -15,3 +15,5 @@ export * from './terminal';
 export * from './user';
 export * from './vehicle';
 export * from './select-option-interface';
+export * from './pml-transaction';
+export * from './pml-billing';

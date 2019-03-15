@@ -32,6 +32,8 @@ export const routes: Routes = [
       { path: 'offence', loadChildren: './views/offence/offence.module#OffenceModule' },
       { path: 'pmt-waybill', loadChildren: './views/pmt-waybill/pmt-waybill.module#PmtWaybillModule' },
       { path: 'pml-waybill', loadChildren: './views/pml-waybill/pml-waybill.module#PmlWaybillModule' },
+      { path: 'pml-transaction', loadChildren: './views/pml-transaction/pml-transaction.module#PmlTransactionModule' },
+      { path: 'pml-billing', loadChildren: './views/pml-billing/pml-billing.module#PmlBillingModule' },
       { path: 'profile', loadChildren: './views/profile/profile.module#ProfileModule' },
       { path: 'rating', loadChildren: './views/rating/rating.module#RatingModule' },
       { path: 'schedule', loadChildren: './views/schedule/schedule.module#ScheduleModule' },

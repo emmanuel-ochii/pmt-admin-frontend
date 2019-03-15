@@ -1,0 +1,159 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>Add PML Waybill</strong>
+          <div class="pull-right">
+              <button class="btn btn-sm btn-info" style="width:100px" (click)="goBack()"><i class="fa fa-reply"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+
+          <!-- form content -->
+          <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                Complete and submit the form to create a new  Waybill for PML
+              </div>
+              <div class="card-body">
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Transaction Code  </span>
+                      </div>
+                      <input id="transaction_code"  formControlName="transaction_code"  name="transaction_code" class="form-control  col-md-4" placeholder="Pml Waybill Transaction code" required/>
+                      
+                      <div class="input-group-append">
+                        <span class="input-group-text"><i class="icon icon-note"></i></span>
+                      </div>
+                    </div>
+                  </div>     
+                  
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Terminal ID</span>
+                          </div>
+                          <input id="terminal_id" formControlName="terminal_id"  name="terminal_id" class="form-control  col-md-4" placeholder="Pml Waybill Terminal Id" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="icon icon-user"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Driver ID</span>
+                          </div>
+                          <input id="driver_id" formControlName="driver_id"  name="driver_id" class="form-control  col-md-4" placeholder="Pml Waybill Driver Id" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="icon icon-user"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Vehicle ID</span>
+                          </div>
+                          <input id="vehicle_id" formControlName="vehicle_id"  name="vehicle_id" class="form-control  col-md-4" placeholder="Pml Waybill Vehicle Id" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-car"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Schedule ID</span>
+                          </div>
+                          <input id="pmt_schedule_id" formControlName="pmt_schedule_id"  name="pmt_schedule_id" class="form-control  col-md-4" placeholder="Pml Waybill Schedule Id" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-note-o"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Route ID</span>
+                          </div>
+                          <input id="pmt_route_id" formControlName="pmt_route_id"  name="pmt_route_id" class="form-control  col-md-4" placeholder="Pml Waybill Route Id" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-deviantart"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Shipment ID</span>
+                          </div>
+                          <input id="pml_shipment_ids" formControlName="pml_shipment_ids"  name="pml_shipment_ids" class="form-control  col-md-4" placeholder="Pml Waybill Shipment Id" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-ship"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Total Charge</span>
+                          </div>
+                          <input id="total_charge" formControlName="total_charge"  name="total_charge" class="form-control  col-md-4" placeholder="Pml Waybill Total Charge" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-money"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Departure Date</span>
+                          </div>
+                          <input id="departure_date" formControlName="departure_date"  name="departure_date" class="form-control  col-md-4" placeholder="Pml Waybill Total Charge" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Authorized Date</span>
+                          </div>
+                          <input id="authorized_date" formControlName="authorized_date"  name="authorized_date" class="form-control  col-md-4" placeholder="Pml Waybill Authorized Date" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="form-group form-actions pull-right">
+                        <button type="submit" class="btn btn-md btn-primary">Submit</button>
+                      </div>
+              </div>
+            </div>
+          </div>
+        </div><!--/.row-->
+      </form>
+          <!--/. form content -->
+        </div>
+      </div>
+    </div>
+  </div><!--/.row-->
+</div>

@@ -48,7 +48,6 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { SelectModule } from 'ng2-select';
 
-
 @NgModule({
   imports: [
     BrowserModule,

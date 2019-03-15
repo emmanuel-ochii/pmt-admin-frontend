@@ -1,0 +1,88 @@
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Edit / Update Your </strong> Rating
+      <div class="pull-right">
+          <button class="btn btn-sm btn-primary" style="width:100px" (click)="ratingAdd()"> Add Rating</button>
+          &nbsp;
+          <button class="btn btn-sm btn-info" style="width:100px" (click)="goBack()"><i class="fa fa-reply"></i></button>
+      </div>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+          <div class="col-md-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                      <span class="input-group-text">Rating  </span>
+                    </div>
+                    <input id="star"  formControlName="star"  [(ngModel)]="formData.star" name="star" class="form-control  col-md-4" placeholder="Rating star from 0 to 5"/>
+                    <!-- <span class="rating">                        
+                        <label>
+                          <input type="radio" name="stars" value="1" />
+                          <span class="icon"> ★</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="stars" value="2" />
+                          <span class="icon"> ★</span>
+                          <span class="icon"> ★</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="stars" value="3" />
+                          <span class="icon"> ★</span>
+                          <span class="icon"> ★</span>
+                          <span class="icon"> ★</span>   
+                        </label>
+                        <label>
+                          <input type="radio" name="stars" value="4" />
+                          <span class="icon"> ★</span>
+                          <span class="icon"> ★</span>
+                          <span class="icon"> ★</span>
+                          <span class="icon"> ★</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="stars" value="5" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                        </label>                        
+                    </span> -->
+                    <div class="input-group-append">
+                    </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="select1">Select Subject</label>
+          <div class="col-md-4">
+            <select id="subject" formControlName="subject" [(ngModel)]="formData.subject" name="subject" class="form-control">
+                <option value="">Please select</option>
+                <option value="DRIVER">DRIVER</option>
+                <option value="TERMINAL">TERMINAL</option>
+                <option value="STAFF">STAFF</option>
+                <option value="VEHICLE">VEHICLE</option>
+              </select>
+            </div>
+          </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Review</span>
+                </div>                            
+                  <textarea id="review" formControlName="review" [(ngModel)]="formData.review"  name="review" rows="9" class="form-control" placeholder="Your Review Content..."></textarea>                            
+                <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+              </div>
+            </div>
+          </div>
+            <div class="form-group form-actions">
+                <button type="submit" class="btn btn-md btn-primary pull-right"><i class="fa fa-dot-circle-o"></i>Submit</button>
+                <button type="reset" class="btn btn-md btn-danger"><i class="fa fa-ban"></i> Reset</button>
+               </div>
+      </form>        
+    </div>
+
+  </div>
+</div>
